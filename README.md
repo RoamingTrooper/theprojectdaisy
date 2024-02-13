@@ -1,4 +1,4 @@
-PROJECT OVERVIEW
+PROJECT OVERVIEW.
 
 Front view on startup
 
