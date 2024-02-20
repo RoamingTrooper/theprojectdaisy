@@ -64,7 +64,14 @@ margin-left: -185px;
 .video-text {
     flex: 1;
     padding: 20px; /* Adjust as needed */
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust as needed */
+    background-color: #ffcc00; /* Yellow background */
 }
+
+.main-text {
+    font-size: 20px; /* Adjust the font size as needed */
+    line-height: 2; /* Adjust the line height for better readability */
+    color: #333; /* Adjust the text color */
+}
+
 /* Styling for intro video ends*/
 
