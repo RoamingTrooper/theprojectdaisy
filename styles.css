@@ -48,15 +48,13 @@ margin-left: -185px;
 }
 
 
-/* Your existing styles here */
 
-/* Styling for the specific video with the "custom-video" class */
-/* Your existing styles here */
-
-/* Styling for the video with the "intro" class */
-/* Styling for the video with the "intro" class */
-.intro {
-    height: 40%; /* Adjust the width as needed for this specific video */
+/* .intro {
+    height: 40%; 
  
 }
+*/ 
 
+video {
+    height: 40%;
+}
