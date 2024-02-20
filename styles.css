@@ -52,8 +52,8 @@ margin-left: -185px;
 
 /* Styling for the specific video with the "custom-video" class */
 .intro {
-    width: 70%; /* Adjust the width as needed for this specific video */
-    height: auto; /* Maintain the aspect ratio */
+    width: auto; /* Adjust the width as needed for this specific video */
+    height: 40%; /* Maintain the aspect ratio */
     display: block; /* Ensures the video is treated as a block element */
     margin: auto; /* Centers the video horizontally */
 }
