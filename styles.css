@@ -54,7 +54,11 @@ margin-left: -185px;
  
 }
 */ 
-
-video {
-    height: 40%;
+/* Styling for the video with the "intro" class */
+.intro {
+    width: auto; /* Allow the width to adjust based on the aspect ratio */
+    max-height: 70vh; /* Set a maximum height to control the size */
+    display: block;
+    margin: 0 auto; /* Center the video horizontally */
 }
+
