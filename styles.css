@@ -49,16 +49,22 @@ margin-left: -185px;
 
 
 
-/* .intro {
-    height: 40%; 
- 
+
+/* Styling for the intro video */
+.video-container {
+    display: flex;
 }
-*/ 
-/* Styling for the video with the "intro" class */
+
 .intro {
-    width: auto; /* Allow the width to adjust based on the aspect ratio */
-    max-height: 40vh; /* Set a maximum height to control the size */
-    display: block;
-    margin: 0 auto; /* Center the video horizontally */
+    width: auto;
+    height: 50vh;
+    margin: 20px; /* Adjust as needed */
 }
+
+.video-text {
+    flex: 1;
+    padding: 20px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust as needed */
+}
+/* Styling for intro video ends*/
 
