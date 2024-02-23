@@ -1,1 +1,75 @@
-<h1> Contact us</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+
+    <style>
+        .c_body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class = "c_body">
+
+<form id="contactForm" action="https://formspree.io/f/mnqevnjp" method="POST">
+    <!-- Your form fields go here -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="contactNumber">Contact Number:</label>
+    <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+
+    <label for="description">Description of the issue:</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+    <script>
+function submitForm() {
+    var form = document.getElementById("contactForm");
+    form.submit();
+}
+
+    </script>
+
+</body>
+</html>
