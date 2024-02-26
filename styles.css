@@ -75,3 +75,12 @@ margin-left: -185px;
 
 /* Styling for intro video ends*/
 
+
+
+
+
+@media (max-width: 600px) {
+    indexpage {
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+}
