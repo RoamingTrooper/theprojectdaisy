@@ -1,4 +1,4 @@
-/* * {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,7 +39,7 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    color: #808080; /* Change to your desired hover color */
+    color: #808080; 
 }
 .logo {
 width: 60px;
