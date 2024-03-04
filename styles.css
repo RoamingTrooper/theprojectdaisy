@@ -1,13 +1,13 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
+} */
 
-body {
+/* body {
     background-color: #f8f8f8;
-}
+} */
 
 .navbar {
     height: 100px;
@@ -74,7 +74,6 @@ margin-left: -185px;
 }
 
 /* Styling for intro video ends*/
-
 
 
 
