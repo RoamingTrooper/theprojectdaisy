@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class = "indexpage"> <!-- Testing for main class-->
+<html lang="en" class = "indexpage"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,42 +30,42 @@
         </div>
     </header>
 
-    <!-- Container for dynamic content -->
+   
     <div id="content-container"></div>
 
     <script>
-        // Function to load content dynamically
+        
         function loadContent(section) {
             if (section === 'contact') {
-                // Load content from contact.html
+                
                 $('#content-container').load('contact.html');
             } else {
-                // Load content from other sections
+               
                 $('#content-container').load(section + '.html');
             }
 
             window.history.pushState(null, null, '#' + section);
         }
 
-        // Add click event to all links
+        
         $("a").on('click', function(event) {
             if (this.hash !== "") {
                 event.preventDefault();
                 var hash = this.hash.substring(1);
-                loadContent(hash); // Load content after clicking
+                loadContent(hash);
             }
         });
 
-        // Load content based on URL hash on initial page load
+       
         if (window.location.hash) {
             var initialHash = window.location.hash.substring(1);
             loadContent(initialHash);
         } else {
-            // Load default content on initial page load
+         
             loadContent('home');
         }
 
-        // Handle popstate event to load content on back/forward navigation
+        
         window.addEventListener('popstate', function(event) {
             var hash = window.location.hash.substring(1);
             loadContent(hash);
