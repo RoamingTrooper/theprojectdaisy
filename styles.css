@@ -51,7 +51,7 @@ margin-left: -185px;
 
 
 
-/* Styling for the intro video */
+/* CSS for the intro video */
 .video-container {
     display: flex;
 }
@@ -59,28 +59,28 @@ margin-left: -185px;
 .intro {
     width: auto;
     height: 50vh;
-    margin: 20px; /* Adjust as needed */
+    margin: 20px; 
 }
 
 .video-text {
     flex: 1;
-    padding: 20px; /* Adjust as needed */
-    background-color: #ffcc00; /* Yellow background */
+    padding: 20px; 
+    background-color: #ffcc00; 
 }
 
 .main-text {
-    font-size: 20px; /* Adjust the font size as needed */
-    line-height: 2; /* Adjust the line height for better readability */
-    color: #333; /* Adjust the text color */
+    font-size: 20px; 
+    line-height: 2; 
+    color: #333; 
 }
 
-/* Styling for intro video ends*/
+/* CSS for intro video ends*/
 
 
 
 
 @media (max-width: 600px) {
     indexpage {
-        width: 80%; /* Adjust the width for smaller screens */
+        width: 80%; 
     }
 }
