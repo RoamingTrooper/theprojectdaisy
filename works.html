@@ -4,50 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-       
-        img {
-            max-width: 100%; 
+        h3 {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background-color: #ffff00;
+            padding: 10px;
+            border-bottom: 2px solid #ccc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .work-container {
+            display: flex;
+        }
+
+        div.work-container div {
+            width: 25%;
+            float: left;
+            margin-right: 20px;
+            margin-left: 20px;
+            border: #333;
+        }
+
+        h2,
+        p {
+            text-align: center;
+        }
+
+        .work-pics {
+            max-width: 200px;
             height: auto;
             display: block;
-            margin: 0 auto; 
-            border: 2px solid #ddd;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-            max-height: 300px; 
+            margin: 0 auto;
+            transition: opacity 0.5s ease;
+        }
+
+        
+        .work-pics.popup-open {
+            opacity: 0.5 ease;
+            pointer-events: none;
+            /* visibility: hidden;
+            pointer-events: none; */
+        }
+
+        .work-pics:not(.popup-open):hover {
+            cursor: pointer;
+            filter: brightness(70%);
+        }
+
+        /* Popup Styles */
+        .work-info {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s ease-in-out;
+            animation: popupGrow 0.5s ease-in-out forwards;
+        }
+
+        @keyframes popupGrow {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            100% {
+                width: 80vw; /* Adjust as needed */
+                height: 80vh; /* Adjust as needed */
+            }
+        }
+
+        .work-info.open-popup {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
+
 </head>
+
 <body>
-    <h3>We started working on Sterilization process.</h3>
-    
-    <div class="video-container">
-        <video class="intro" autoplay muted loop>
-        <source src="next step (1).mp4" type="video/mp4"><br><br>
-        Your browser does not support the video tag.
-        </video>
-        <div class="video-text">
-            <h4>25th March 2024</h4>
-            <p class="main-text">In response to the growing concern over pet overpopulation and the welfare of stray animals,<br> 
-                our organization has implemented a comprehensive sterilization process for dogs.<br> 
-                Recognizing the importance of proactive measures to control population growth and alleviate<br> 
-                the strain on animal shelters and resources, we have initiated a systematic approach to spaying and neutering dogs within our community.<br> 
-                Through partnerships with local veterinary clinics and dedicated outreach programs,<br> 
-                we aim to promote responsible pet ownership and reduce the number of unplanned litters.<br> 
-                By offering affordable or subsidized sterilization services, we strive to make this essential procedure accessible to all dog owners, <br>
-                regardless of their financial circumstances. Through education campaigns and community engagement efforts,<br> 
-                we seek to raise awareness about the benefits of sterilization not only in terms of population control but also for the health and well-being of individual animals.<br> 
- <br><br> </p>
-        </div>
+
+    <h3>See the Difference: Project Daisy's Projects in Action</h3>
+
+    <br><br><br>
+
+    <div class="work-info" id="popup1">
+        <br>
+        <h1> Sterilization</h1><br>
+        <button type="button" onclick="closePopup(1)">OK</button>
     </div>
-   <br>
-    <br>
-    <div class="video-container">
-        <img src="vet.jpeg" alt="Description of the image">
-        <div class="video-text">
-            <h4>10th March 2024</h4>
-            <p class="main-text"> <big>Vet</big>🐕 <br><br>
-            Took puppy to vet.
-        </div>
+
+    <div class="work-info" id="popup2">
+        <h1> vet</h1>
+        <button type="button" onclick="closePopup(2)">OK</button>
     </div>
+
+    <div class="work-info" id="popup3">
+        <h1> Jacket</h1>
+        <button type="button" onclick="closePopup(3)">OK</button>
+    </div>
+
+    <div class="work-container">
+
+        <!-- Each div = one work -->
+
+        <div style="background-color:#FFF4A3;">
+            <br><h2>Sterilization</h2><br>
+            <img src="https://img.freepik.com/free-vector/hand-drawn-animal-sterilization-illustration_23-2150052866.jpg" class="work-pics" onclick="openPopup(1, this)">
+            <br> <p>Our Sterilization drive to save puppies</p> <br>
+        </div>
+
+        <div style="background-color:#FFC0C7;">
+            <br><h2>Vet</h2><br>
+            <img src="https://img.freepik.com/free-vector/veterinary-with-dog_1196-293.jpg?size=338&ext=jpg&ga=GA1.1.1687694167.1712102400&semt=ais" class="work-pics" onclick="openPopup(2, this)">
+            <br> <p>Our visits to vet.</p> <br>
+        </div>
+
+        <div style="background-color:#D9EEE1;">
+            <br><h2>Jacket</h2><br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_F5GtQUT9dKq2uWKQfWRAPwNyrwk_Twca3j3eRvOfQ&s" class="work-pics" onclick="openPopup(3, this)">
+            <br><p>Saving dogs from cold in winter.</p><br>
+        </div>
+
+    </div>
+
+    <script>
+        function openPopup(popupId, image) {
+            var popup = document.getElementById("popup" + popupId);
+            popup.classList.add("open-popup");
+            image.classList.add("popup-open");
+        }
+
+        function closePopup(popupId) {
+            var popup = document.getElementById("popup" + popupId);
+            popup.classList.remove("open-popup");
+            var images = document.querySelectorAll(".work-pics");
+            images.forEach(function(img) {
+                img.classList.remove("popup-open");
+            });
+        }
+    </script>
+
 </body>
 </html>
