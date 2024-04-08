@@ -7,7 +7,7 @@
 </head>
 <body>
 
-
+<h1> Welcome to Project Daisy</h1>
 
 <!-- Video adding -->
 <!-- Video added testing -->
@@ -31,54 +31,40 @@
 </div>
 <!-- Video adding -->
 <hr>
-
+<br><br>
 <!-- MEMBERS -->
 <div class = "memb">
     <BIG> OUR TEAM</BIG>
 </div>
 
+<br><br>
 
 
-<!-- MEMBERS -->
 
-<!-- MEMBERS SECTION -->
 
-<style>
-    .m_body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f2f2f2;
+
+ <style>
+    h3{
+        text-align: center;
+
     }
-
-    .m_container {
-        max-width: 1200px;
-        margin: 80px auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between; /* Change to space-between */
-        margin-bottom: 60px; /* Adjust the value as needed */
-    }
-
-    .member_box {
-        width: 30%;
-        background-color: #fff;
-        border: 3px solid #ddd;
-        margin: 10px;
-        padding: 15px;
-        box-sizing: border-box;
+    p{
         text-align: center;
     }
+    /* Heading */
+    h1 {
+    text-align: center;
+  font-size: 36px;
+  font-family: 'Arial', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  background-color: rgba(240, 240, 36, 0.793);
+}
+    /* Heading ends */
 
-    .member_box p {
-        margin-bottom: 10px; /* Adjust the value as needed */
-
-
-    }
-
-        /* MEMBERS */       
+     /* MEMBERS */       
         
-    .memb {
+     .memb {
             font-family: Arial, sans-serif;
             font-size: 24px;
             font-weight: bold;
@@ -92,39 +78,115 @@
         }
 
         /* Members */
-</style>
+
+      /* Team */
+.team {
+    display: flex;
+    /* width: 25%; */
+    /* flex-wrap: wrap;  */
+    justify-content: space-around; 
+}
+
+.team .team_member {
+    background: #fff;
+    margin: 5px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8e8b;
+    /* position: relative; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual */
+}
+
+.team .team_member h3 {
+    color: #81c644;
+    font-size: 26px;
+    margin-top: 0; /* Remove default margin */
+}
+
+.team .team_member p.role {
+    color: #ccc;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 12px 0;
+}
+/* TEAM ends */
+
+/* team pic */
 
 
-<!-- <body class="m_body">
-<div class="m_container">
-    <div class="member_box" style ="background-color: #34eb34;">
-        <h2>Members on campus</h2> <br>
-        <p>Ayush 1</p>
-        <p>Ayush 2</p>
-        <p>Ayush 3</p>
-        <p>Ayush 4</p>
-    </div>
-    <div class="member_box">
-        <h2>Members for Medical</h2> <br>
-        <p>Altaf 1</p>
-        <p>Altaf 2</p>
-        <p>Altaf 3</p>
-        <p>Altaf 4</p>
-    </div>
-    <div class="member_box" style = "background-color: #19b9e6;">
-        <h2>Members for Helping</h2> <br>
-        <p>Tanu 1</p>
-        <p>Tanu 2</p>
-        <p>Tanu 3</p>
-        <p>Tanu 4</p>
+.team .team_member .team_img {
+    display: flex; /* Make the container a flexbox */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin-bottom: 10px; /* Add some spacing below the image */
+}
 
-    </div>
-</div>
-
-
-<!-- Members section ends -->
+.team .team_member .team_img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    align-self: center;
+    right: 20%;
+    
+    
     
 
+
+}
+
+
+
+/* team pic emds */
+
+
+         
+
+
+    
+ </style>
+
+
+
+<div class="team">
+
+    <div class="team_member">
+        <div class="team_img">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+        </div>
+        <br>
+
+        <h3>Member 1</h3>
+        <p class="role"> DEVELOPER</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, debitis ea? Officia, ipsa ut! Necessitatibus soluta eveniet delectus minus eos?</p>
+    </div>
+
+    <div class="team_member">
+        <div class="team_img">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+        </div>
+        <br>
+        <h3>Member 1 </h3>
+        <p class="role"> DEVELOPER</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, debitis ea? Officia, ipsa ut! Necessitatibus soluta eveniet delectus minus eos?</p>
+    </div>
+
+    <div class="team_member">
+        <div class="team_img">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+        </div>
+        <br>
+        <h3>Member 1 </h3>
+        <p class="role"> DEVELOPER</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, debitis ea? Officia, ipsa ut! Necessitatibus soluta eveniet delectus minus eos?</p>
+    </div>
+
+    
+    
+
+</div>
+    
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 </body>
 </html>
