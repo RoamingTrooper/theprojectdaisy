@@ -63,14 +63,19 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: white;
-            border: 2px solid black;
+            background-color: #e6bc97;
+            /* border: 2px solid black; */
             padding: 20px;
             box-sizing: border-box;
             visibility: hidden;
             opacity: 0;
             transition: visibility 0s, opacity 0.5s ease-in-out;
-            animation: popupGrow 0.5s ease-in-out forwards;
+            /* animation: popupGrow 0.5s ease-in-out forwards; */
+            animation: popupGrow 0.5s linear forwards;
+            
+
+            
+            
         }
 
         @keyframes popupGrow {
@@ -79,8 +84,8 @@
                 height: 0;
             }
             100% {
-                width: 80vw; /* Adjust as needed */
-                height: 80vh; /* Adjust as needed */
+                width: 90vw; /* Adjust as needed */
+                height: 90vh; /* Adjust as needed */
             }
         }
 
@@ -101,6 +106,9 @@
     <div class="work-info" id="popup1">
         <br>
         <h1> Sterilization</h1><br>
+        <p>
+            
+        </p>
         <button type="button" onclick="closePopup(1)">OK</button>
     </div>
 
@@ -118,7 +126,7 @@
 
         <!-- Each div = one work -->
 
-        <div style="background-color:#FFF4A3;">
+        <div style="background-color:#fff4A3;">
             <br><h2>Sterilization</h2><br>
             <img src="https://img.freepik.com/free-vector/hand-drawn-animal-sterilization-illustration_23-2150052866.jpg" class="work-pics" onclick="openPopup(1, this)">
             <br> <p>Our Sterilization drive to save puppies</p> <br>
